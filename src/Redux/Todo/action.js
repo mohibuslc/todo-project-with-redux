@@ -1,15 +1,8 @@
-import {
-    ADDED,
-    TOGGLED,
-    CLEARCOMPLETED,
-    COLORSELECTED,
-    ALLCOMPLETED,
-    DELETED,
-  } from "./actionType";
+import {  ADDED,TOGGLED,COLORSELECTED,DELETED,ALLCOMPLETED,CLEARCOMPLETED} from "./actionType";
   
   export const added = (todoText) => {
     return {
-      type: ADDED,
+      type:ADDED,
       payload: todoText,
     };
   };
@@ -40,7 +33,7 @@ import {
   
   export const allCompleted = () => {
     return {
-      type: ALLCOMPLETED,
+      type:ALLCOMPLETED,
     };
   };
   

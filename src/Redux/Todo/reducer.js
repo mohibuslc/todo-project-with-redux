@@ -13,7 +13,7 @@ const nextMaxId = (todos) => {
   return maxId + 1;
 };
 
-const todoReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADDED:
       return [
@@ -39,12 +39,15 @@ const todoReducer = (state = initialState, action) => {
         return state.filter((todo) => todo.id !== action.payload);
       
     case ALLCOMPLELETED:
-      return state.map((todo) => {
+
+      return state.map(todo => {
+
         return {
           ...todo,
           completed: true,
         };
       });
+      
     case CLEARCOMPLETED:
       const { todoId, color } = action.payload;
 
@@ -66,4 +69,4 @@ const todoReducer = (state = initialState, action) => {
   }
 };
 
-export default todoReducer;
+export default reducer;

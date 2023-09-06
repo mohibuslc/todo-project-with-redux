@@ -11,6 +11,6 @@ export const COLORSELECTED ="Todo/colorSelected"
 
 export const DELETED = "Todo/deleted"; 
 
-export const ALLCOMPLELETED ="Todo/allCompleted"; 
+export const COMPLETEDALL= "Todo/completedAll"; 
 
 export const CLEARCOMPLETED ="Todo/clearCompleted"; 

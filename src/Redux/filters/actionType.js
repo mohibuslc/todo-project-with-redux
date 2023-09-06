@@ -1,5 +1,3 @@
+export const STATUSCHANGE = "Filters/statusChange";
 
-
-export const STATUSCHANGE ="Filters/statusChange";
-export const COLORCHANGED="Filters/colorChanged";
-
+export const COLORCHANGED = "Filters/colorChanged";

@@ -1,4 +1,4 @@
-import { COLORCHANGED, STATUSCHANGE } from "./actionType";
+ import { COLORCHANGED, STATUSCHANGE } from "./actionType";
 import initialState from "./initialState"; // Fixed the typo here
 
 const reducer = (state= initialState,  action) => {

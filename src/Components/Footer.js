@@ -33,6 +33,7 @@ export default function Footer() {
       <ul className="flex space-x-1 items-center text-xs">
         <li
           className={`cursor-pointer ${status === "ALL" && "font-bold"}`}
+          
           onClick={() => handleStatusChange("ALL")}
         >
           All

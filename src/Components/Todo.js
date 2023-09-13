@@ -34,6 +34,7 @@ export default function Todo({ todo }) {
           checked={completed}
           onChange={() => handleChange(id)}
         />
+        
         {completed && (
           <svg
             className="fill-current w-3 h-3 text-green-500 pointer-events-none"

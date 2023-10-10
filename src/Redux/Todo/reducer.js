@@ -5,21 +5,30 @@ import {
   COLORSELECTED,
   DELETED,
   TOGGLED,
+  LOADED,
 } from "./actionType";
+
+
 import initialState from "./initialState";
 
 const nextMaxId = (todos) => {
   const maxId = todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1);
   return maxId + 1;
+
 };
 
+
 const reducer = (state = initialState, action) => {
+
   switch (action.type) {
+
     case ADDED:
       return [
         ...state,
         {
           id: nextMaxId(state),
+          text:action.payload,
+          completed:false
         },
       ];
 
@@ -37,6 +46,9 @@ const reducer = (state = initialState, action) => {
 
       case DELETED:
         return state.filter((todo) => todo.id !== action.payload);
+
+        case LOADED:
+          return action.payload 
       
     case COMPLETEDALL:
 
@@ -53,6 +65,7 @@ const reducer = (state = initialState, action) => {
       return state.filter((todo) => !todo.completed);
 
     case COLORSELECTED:
+
       const { todoId, color } = action.payload;
 
       return state.map((todo) => {

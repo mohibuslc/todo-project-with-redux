@@ -3,7 +3,8 @@
 
 
 
-export const ADDED="Todo/added"; 
+export const ADDED = "Todo/added"; 
+export const LOADED = "Todo/loaded"; 
 
 export const TOGGLED ="Todo/toggled"; 
 
